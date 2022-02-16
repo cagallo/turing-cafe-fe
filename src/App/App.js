@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import apiCalls from '../apiCalls';
+import ResyContainer from '../ResyContainer/ResyContainer';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      reservations = [],
+      reservations: [],
       error: ''
     }
   }
 
-  componentDidMount() {
+  componentDidMount = async() => {
     try {
       let reservationData = await apiCalls.getReservationData();
       this.setState({reservations: reservationData})
@@ -21,7 +22,7 @@ class App extends Component {
     }
   }
 
-  render() {
+  render = () => {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
@@ -29,7 +30,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ResyContainer reservations={this.state.reservations}/>
         </div>
       </div>
     )
