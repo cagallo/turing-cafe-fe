@@ -1,0 +1,8 @@
+.resy-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  justify-content: center;
+}
