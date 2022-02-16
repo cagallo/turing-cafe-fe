@@ -21,7 +21,6 @@ class ResyForm extends Component {
       ...this.state
     }
     this.props.addReservation(newResy);
-    console.log(this.state)
     this.clearInputs();
   }
 

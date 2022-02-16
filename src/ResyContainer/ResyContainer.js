@@ -3,9 +3,8 @@ import './ResyContainer.css'
 import ResyCard from '../ResyCard/ResyCard';
 
 
-const ResyContainer = ({reservations}) => {
-  
-  const reservationCards = reservations.map(reservation => {
+const ResyContainer = ({ reservations }) => {
+  const reservationCards = reservations.map((reservation) => {
     return (
       <ResyCard
         name={reservation.name}
@@ -19,6 +18,7 @@ const ResyContainer = ({reservations}) => {
   })
 
   return (
+
     <div className='resy-container'>
       {reservationCards}
     </div>
