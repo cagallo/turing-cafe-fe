@@ -6,12 +6,15 @@ form {
 }
 
 input, button {
-  margin: 15px;
-  width: 25%;
+  margin: 30px;
+  width: 250px;
+  height: 40px;
   font-size: 18px;
 }
 
-button {
+.reservation-button {
   border: 2px solid white;
   background-color: teal;
+  height: 50px;
+  color: white;
 }
