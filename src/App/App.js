@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   render = () => {
+    const reservationConfirmation = !this.state.reservations ? <h2>No Reservations Found, Book Now!</h2> : <ResyContainer reservations={this.state.reservations}/>
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
@@ -30,7 +31,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          <ResyContainer reservations={this.state.reservations}/>
+          {reservationConfirmation}
         </div>
       </div>
     )
