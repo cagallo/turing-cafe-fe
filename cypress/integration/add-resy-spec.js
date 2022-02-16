@@ -74,8 +74,9 @@ describe('Adding new reservations flow', () => {
     );
 
     cy.visit('http://localhost:3000')
-      // .get('input[name="name"]') <---- not visible on page, can't test
-      //   .type('Chez')
+    cy.viewport(1800, 1020)
+      .get('input[name="name"]')
+        .type('Chez')
       .get({force: true})
       .get('input[name="date"]')
         .type('12/24')
@@ -83,11 +84,10 @@ describe('Adding new reservations flow', () => {
         .type('6:00')
       .get('input[name="number"]')
         .type('12')
-      // .get('.reservation-button').click() <--- not visible on page, can't test
-      .get('.reservation-button').click({force: true})
+      .get('.reservation-button').click() 
 
-    // cy.get('.resy-card')
-    //   .contains('Chez')
+    cy.get('.resy-card')
+      .contains('Chez')
 
     cy.get('.resy-card')
       .contains('12/24')

@@ -14,13 +14,13 @@ class ResyForm extends Component {
 
   handleChange = event => this.setState({ [event.target.name]: event.target.value});
 
-  submitReservation = event => {
+  submitReservation = async(event) => {
     event.preventDefault();
     const newResy = {
       id: Date.now(),
       ...this.state
     }
-    this.props.addReservation(newResy);
+    await this.props.addReservation(newResy);
     this.clearInputs();
   }
 

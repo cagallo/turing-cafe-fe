@@ -23,8 +23,9 @@ class App extends Component {
     }
   }
 
-  addReservation = (newResy) => {
+  addReservation = async(newResy) => {
     this.setState({reservations: [...this.state.reservations, newResy]});
+    await apiCalls.postReservation(newResy);
   }
 
   render = () => {

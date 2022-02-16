@@ -20,6 +20,10 @@ describe('Reservations input data flow', () => {
     );
 
     cy.visit('http://localhost:3000/')
+    cy.viewport(1800, 1020)
+      .get('input[name="name"]')
+        .type('Chez')
+        .should('have.value', 'Chez')
       .get('input[name="date"]')
         .type('12/24')
         .should('have.value', '12/24')
