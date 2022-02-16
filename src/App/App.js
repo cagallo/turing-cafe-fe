@@ -24,10 +24,13 @@ class App extends Component {
   }
 
   addReservation = (newResy) => {
+    console.log(newResy)
     this.setState({reservations: [...this.state.reservations, newResy]})
+    console.log(this.state)
   }
 
   render = () => {
+    console.log(this.state.reservations)
     const reservationConfirmation = !this.state.reservations ? <h2>No Reservations Found, Book Now!</h2> : <ResyContainer reservations={this.state.reservations}/>
     return (
       <div className="App">
