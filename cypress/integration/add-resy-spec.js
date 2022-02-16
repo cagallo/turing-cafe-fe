@@ -2,8 +2,6 @@
 //I can't get some elements to render during the tests so failed because of that 
 //Obviously I need a lot of work with cypress haha
 
-
-
 describe('Adding new reservations flow', () => {
   
   it('should display new reservation once user fills inputs and clicks "make reservation', () => {
